@@ -21,7 +21,7 @@ namespace Beamed.Tests {
       var response = await client.GetAsync("channels");
       Assert.Equal(response.StatusCode, HttpStatusCode.OK);
 
-      var channels = JsonConvert.DeserializeObject<List<RestChannel>>(await response.Content.ReadAsStringAsync());
+      var channels = JsonConvert.DeserializeObject<List<ChannelAdvanced>>(await response.Content.ReadAsStringAsync());
       Assert.Equal(channels.Count, 50);
 
       // check if every Channel has an User attached to it

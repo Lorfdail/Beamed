@@ -1,7 +1,7 @@
 using Newtonsoft.Json;
 
 namespace Beamed.Rest.Entities {
-  public class RestUser {
+  public class User : IEntity {
     [JsonProperty(PropertyName = "id")]
     public uint Id { get; private set; }
 

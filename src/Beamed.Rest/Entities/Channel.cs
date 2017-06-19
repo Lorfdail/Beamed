@@ -1,7 +1,7 @@
 using Newtonsoft.Json;
 
 namespace Beamed.Rest.Entities {
-  public struct RestChannel {
+  public class Channel : IEntity {
     [JsonProperty(PropertyName = "id")]
     public uint Id { get; private set; }
 
@@ -78,12 +78,6 @@ namespace Beamed.Rest.Entities {
     public string CostreamId { get; private set; }
 
     [JsonProperty(PropertyName = "thumbnail")]
-    public RestResource Thumbnail { get; private set; }
-
-    [JsonProperty(PropertyName = "user")]
-    public RestUser User { get; private set; }
-    
-    [JsonProperty(PropertyName = "type")]
-    public RestGameType Type { get; private set; }
+    public Resource Thumbnail { get; private set; }
   }
 }
