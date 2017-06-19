@@ -1,0 +1,69 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26124.0
+MinimumVisualStudioVersion = 15.0.26124.0
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{C1C8C12B-46AB-4D24-9A6F-FE3F7A15B553}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Beamed.Core", "src\Beamed.Core\Beamed.Core.csproj", "{17382DD3-B37C-4A27-AD82-53A2B783AE19}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Beamed.Rest", "src\Beamed.Rest\Beamed.Rest.csproj", "{AF7FEFEF-7D08-46D3-9A50-09A469B87240}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Beamed.Tests", "src\Beamed.Tests\Beamed.Tests.csproj", "{D0C40755-A2E3-4DB5-830C-FACF9B7B30FE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{17382DD3-B37C-4A27-AD82-53A2B783AE19}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{17382DD3-B37C-4A27-AD82-53A2B783AE19}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{17382DD3-B37C-4A27-AD82-53A2B783AE19}.Debug|x64.ActiveCfg = Debug|x64
+		{17382DD3-B37C-4A27-AD82-53A2B783AE19}.Debug|x64.Build.0 = Debug|x64
+		{17382DD3-B37C-4A27-AD82-53A2B783AE19}.Debug|x86.ActiveCfg = Debug|x86
+		{17382DD3-B37C-4A27-AD82-53A2B783AE19}.Debug|x86.Build.0 = Debug|x86
+		{17382DD3-B37C-4A27-AD82-53A2B783AE19}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{17382DD3-B37C-4A27-AD82-53A2B783AE19}.Release|Any CPU.Build.0 = Release|Any CPU
+		{17382DD3-B37C-4A27-AD82-53A2B783AE19}.Release|x64.ActiveCfg = Release|x64
+		{17382DD3-B37C-4A27-AD82-53A2B783AE19}.Release|x64.Build.0 = Release|x64
+		{17382DD3-B37C-4A27-AD82-53A2B783AE19}.Release|x86.ActiveCfg = Release|x86
+		{17382DD3-B37C-4A27-AD82-53A2B783AE19}.Release|x86.Build.0 = Release|x86
+		{AF7FEFEF-7D08-46D3-9A50-09A469B87240}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AF7FEFEF-7D08-46D3-9A50-09A469B87240}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AF7FEFEF-7D08-46D3-9A50-09A469B87240}.Debug|x64.ActiveCfg = Debug|x64
+		{AF7FEFEF-7D08-46D3-9A50-09A469B87240}.Debug|x64.Build.0 = Debug|x64
+		{AF7FEFEF-7D08-46D3-9A50-09A469B87240}.Debug|x86.ActiveCfg = Debug|x86
+		{AF7FEFEF-7D08-46D3-9A50-09A469B87240}.Debug|x86.Build.0 = Debug|x86
+		{AF7FEFEF-7D08-46D3-9A50-09A469B87240}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AF7FEFEF-7D08-46D3-9A50-09A469B87240}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AF7FEFEF-7D08-46D3-9A50-09A469B87240}.Release|x64.ActiveCfg = Release|x64
+		{AF7FEFEF-7D08-46D3-9A50-09A469B87240}.Release|x64.Build.0 = Release|x64
+		{AF7FEFEF-7D08-46D3-9A50-09A469B87240}.Release|x86.ActiveCfg = Release|x86
+		{AF7FEFEF-7D08-46D3-9A50-09A469B87240}.Release|x86.Build.0 = Release|x86
+		{D0C40755-A2E3-4DB5-830C-FACF9B7B30FE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D0C40755-A2E3-4DB5-830C-FACF9B7B30FE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D0C40755-A2E3-4DB5-830C-FACF9B7B30FE}.Debug|x64.ActiveCfg = Debug|x64
+		{D0C40755-A2E3-4DB5-830C-FACF9B7B30FE}.Debug|x64.Build.0 = Debug|x64
+		{D0C40755-A2E3-4DB5-830C-FACF9B7B30FE}.Debug|x86.ActiveCfg = Debug|x86
+		{D0C40755-A2E3-4DB5-830C-FACF9B7B30FE}.Debug|x86.Build.0 = Debug|x86
+		{D0C40755-A2E3-4DB5-830C-FACF9B7B30FE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D0C40755-A2E3-4DB5-830C-FACF9B7B30FE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D0C40755-A2E3-4DB5-830C-FACF9B7B30FE}.Release|x64.ActiveCfg = Release|x64
+		{D0C40755-A2E3-4DB5-830C-FACF9B7B30FE}.Release|x64.Build.0 = Release|x64
+		{D0C40755-A2E3-4DB5-830C-FACF9B7B30FE}.Release|x86.ActiveCfg = Release|x86
+		{D0C40755-A2E3-4DB5-830C-FACF9B7B30FE}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{17382DD3-B37C-4A27-AD82-53A2B783AE19} = {C1C8C12B-46AB-4D24-9A6F-FE3F7A15B553}
+		{AF7FEFEF-7D08-46D3-9A50-09A469B87240} = {C1C8C12B-46AB-4D24-9A6F-FE3F7A15B553}
+		{D0C40755-A2E3-4DB5-830C-FACF9B7B30FE} = {C1C8C12B-46AB-4D24-9A6F-FE3F7A15B553}
+	EndGlobalSection
+EndGlobal

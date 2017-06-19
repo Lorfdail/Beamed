@@ -1,0 +1,4 @@
+bin/
+obj/
+./src/Beamed.ResourceGenerator/
+node_modules
