@@ -9,7 +9,7 @@ namespace Beamed.Rest.Entities {
     }
   }
 
-  public class ConfettiColor : IEntity {
+  public class ConfettiColor {
     [JsonProperty(PropertyName = "probability")]
     public double probability { get; private set; }
 
@@ -23,7 +23,7 @@ namespace Beamed.Rest.Entities {
     public string Blue { get; private set; }
   }
 
-  public class ConfettiParticle : IEntity {
+  public class ConfettiParticle {
     [JsonProperty(PropertyName = "probability")]
     public double Probability { get; private set; }
 
@@ -49,7 +49,7 @@ namespace Beamed.Rest.Entities {
     public IConfettiShape Shape { get; private set; }
   }
 
-  public class ConfettiSettings : IEntity {
+  public class ConfettiSettings {
     [JsonProperty(PropertyName = "count")]
     public string Count { get; private set; }
 

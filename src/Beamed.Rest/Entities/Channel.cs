@@ -76,8 +76,5 @@ namespace Beamed.Rest.Entities {
 
     [JsonProperty(PropertyName = "costreamId")]
     public string CostreamId { get; private set; }
-
-    [JsonProperty(PropertyName = "thumbnail")]
-    public Resource Thumbnail { get; private set; }
   }
 }
