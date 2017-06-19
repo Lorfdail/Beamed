@@ -76,7 +76,12 @@ namespace Beamed.Rest.Net {
 
       // if we substract the time when the limit end from the current time we get the remaining time
       if(_requestTimeRecords.TryGetValue(bucket.Name, out RateLimitTracker tracker))
-        return (tracker.TimeBeginLimit.Add(bucket.TimeInterval) - DateTime.Now).Milliseconds;
+      {
+        int ms = (tracker.TimeBeginLimit.Add(bucket.TimeInterval) - DateTime.Now).Milliseconds;
+        if(ms < 0)
+          ms = 0;
+        return ms;
+      }
 
       // there is no tracker .. no tracker == no limits!
       return 0;
