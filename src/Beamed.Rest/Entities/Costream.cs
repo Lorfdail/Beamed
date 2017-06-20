@@ -2,27 +2,27 @@ using Newtonsoft.Json;
 
 namespace Beamed.Rest.Entities {
   public class CostreamChannel : IEntity {
-    [JsonProperty(PropertyName = "id")]
+    [JsonProperty("id")]
     public uint Id { get; private set; }
 
-    [JsonProperty(PropertyName = "userId")]
+    [JsonProperty("userId")]
     public uint UserId { get; private set; }
 
-    [JsonProperty(PropertyName = "token")]
+    [JsonProperty("token")]
     public string Token { get; private set; }
   }
 
   public class Costream : IEntity {
-    [JsonProperty(PropertyName = "channels")]
+    [JsonProperty("channels")]
     public CostreamChannel[] Channels { get; private set; }
 
-    [JsonProperty(PropertyName = "startedAt")]
+    [JsonProperty("startedAt")]
     public string StartedAt { get; private set; }
 
-    [JsonProperty(PropertyName = "capacity")]
+    [JsonProperty("capacity")]
     public uint Capacity { get; private set; }
 
-    [JsonProperty(PropertyName = "layout")]
+    [JsonProperty("layout")]
     public CostreamLayout Layout { get; private set; }
   }
 }

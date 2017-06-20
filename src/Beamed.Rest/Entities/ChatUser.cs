@@ -2,16 +2,16 @@ using Newtonsoft.Json;
 
 namespace Beamed.Rest.Entities {
   public class ChatUser : IEntity {
-    [JsonProperty(PropertyName = "userId")]
+    [JsonProperty("userId")]
     public uint Id { get; private set; }
 
-    [JsonProperty(PropertyName = "userName")]
+    [JsonProperty("userName")]
     public string Name { get; private set; }
 
-    [JsonProperty(PropertyName = "userRoles")]
+    [JsonProperty("userRoles")]
     public string[] Roles { get; private set; }
 
-    [JsonProperty(PropertyName = "lurking")]
+    [JsonProperty("lurking")]
     public bool? Lurking { get; private set; }
   }
 }

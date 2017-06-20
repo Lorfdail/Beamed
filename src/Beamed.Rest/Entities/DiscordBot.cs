@@ -2,42 +2,42 @@ using Newtonsoft.Json;
 
 namespace Beamed.Rest.Entities {
   public class DiscordBotRole {
-    [JsonProperty(PropertyName = "id")]
+    [JsonProperty("id")]
     public uint Id { get; private set; }
 
-    [JsonProperty(PropertyName = "type")]
+    [JsonProperty("type")]
     public string Type { get; private set; }
 
-    [JsonProperty(PropertyName = "roleId")]
+    [JsonProperty("roleId")]
     public string RoleId { get; private set; }
 
-    [JsonProperty(PropertyName = "gracePeriod")]
+    [JsonProperty("gracePeriod")]
     public uint? GracePeriod { get; private set; }
   }
 
   public class DiscordBot : IEntity {
-    [JsonProperty(PropertyName = "id")]
+    [JsonProperty("id")]
     public uint Id { get; private set; }
 
-    [JsonProperty(PropertyName = "channelId")]
+    [JsonProperty("channelId")]
     public uint ChannelId { get; private set; }
 
-    [JsonProperty(PropertyName = "inviteSetting")]
+    [JsonProperty("inviteSetting")]
     public string InviteSetting { get; private set; }
 
-    [JsonProperty(PropertyName = "inviteChannel")]
+    [JsonProperty("inviteChannel")]
     public string InviteChannel { get; private set; }
 
-    [JsonProperty(PropertyName = "liveUpdateState")]
+    [JsonProperty("liveUpdateState")]
     public bool UpdateStatusOnLive { get; private set; }
 
-    [JsonProperty(PropertyName = "liveAnnounceChannel")]
+    [JsonProperty("liveAnnounceChannel")]
     public bool AnnounceChannelOnLive { get; private set; }
 
-    [JsonProperty(PropertyName = "syncEmoteRoles")]
+    [JsonProperty("syncEmoteRoles")]
     public uint[] SyncEmotesRoles { get; private set; }
 
-    [JsonProperty(PropertyName = "roles")]
+    [JsonProperty("roles")]
     public DiscordBotRole[] Roles { get; private set; }
   }
 }

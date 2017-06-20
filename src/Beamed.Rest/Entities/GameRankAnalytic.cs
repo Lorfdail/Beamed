@@ -2,19 +2,19 @@ using Newtonsoft.Json;
 
 namespace Beamed.Rest.Entities {
   public class GameRankAnalytic : IEntity {
-    [JsonProperty(PropertyName = "channel")]
+    [JsonProperty("channel")]
     public uint Channel { get; private set; }
 
-    [JsonProperty(PropertyName = "streams")]
+    [JsonProperty("streams")]
     public uint Streams { get; private set; }
 
-    [JsonProperty(PropertyName = "views")]
+    [JsonProperty("views")]
     public uint Views { get; private set; }
 
-    [JsonProperty(PropertyName = "shared")]
+    [JsonProperty("shared")]
     public uint Shared { get; private set; }
 
-    [JsonProperty(PropertyName = "time")]
+    [JsonProperty("time")]
     public string Time { get; private set; }
   }
 }

@@ -2,22 +2,22 @@ using Newtonsoft.Json;
 
 namespace Beamed.Rest.Entities {
   public class FeatureSchedule : TimeStamped {
-    [JsonProperty(PropertyName = "id")]
+    [JsonProperty("id")]
     public uint Id { get; private set; }
 
-    [JsonProperty(PropertyName = "startedAt")]
+    [JsonProperty("startedAt")]
     public string StartedAt { get; private set; }
 
-    [JsonProperty(PropertyName = "endedAt")]
+    [JsonProperty("endedAt")]
     public string EndedAt { get; private set; }
 
-    [JsonProperty(PropertyName = "type")]
+    [JsonProperty("type")]
     public string Type { get; private set; }
 
-    [JsonProperty(PropertyName = "userId")]
+    [JsonProperty("userId")]
     public uint? UserId { get; private set; }
 
-    [JsonProperty(PropertyName = "channelId")]
+    [JsonProperty("channelId")]
     public string ChannelId { get; private set; }
   }
 }

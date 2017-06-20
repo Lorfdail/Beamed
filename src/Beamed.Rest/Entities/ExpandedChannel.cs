@@ -2,16 +2,16 @@ using Newtonsoft.Json;
 
 namespace Beamed.Rest.Entities {
   public class ExpandedChannel : ChannelAdvanced {
-    [JsonProperty(PropertyName = "thumbnail")]
+    [JsonProperty("thumbnail")]
     public Resource Thumbnail { get; private set; }
 
-    [JsonProperty(PropertyName = "cover")]
+    [JsonProperty("cover")]
     public Resource Cover { get; private set; }
 
-    [JsonProperty(PropertyName = "badge")]
+    [JsonProperty("badge")]
     public Resource Badge { get; private set; }
 
-    [JsonProperty(PropertyName = "preferences")]
+    [JsonProperty("preferences")]
     public ChannelPreferences Preferences { get; private set; }
   }
 }

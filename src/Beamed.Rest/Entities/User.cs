@@ -2,43 +2,43 @@ using Newtonsoft.Json;
 
 namespace Beamed.Rest.Entities {
   public class User : IEntity {
-    [JsonProperty(PropertyName = "id")]
+    [JsonProperty("id")]
     public uint Id { get; private set; }
 
-    [JsonProperty(PropertyName = "level")]
+    [JsonProperty("level")]
     public uint Level { get; private set; }
 
-    [JsonProperty(PropertyName = "social")]
+    [JsonProperty("social")]
     public object Social { get; private set; }
 
-    [JsonProperty(PropertyName = "username")]
+    [JsonProperty("username")]
     public string Username { get; private set; }
 
-    [JsonProperty(PropertyName = "email")]
+    [JsonProperty("email")]
     public string Email { get; private set; }
 
-    [JsonProperty(PropertyName = "verified")]
+    [JsonProperty("verified")]
     public bool Verified { get; private set; }
 
-    [JsonProperty(PropertyName = "experience")]
+    [JsonProperty("experience")]
     public uint Experience { get; private set; }
 
-    [JsonProperty(PropertyName = "sparks")]
+    [JsonProperty("sparks")]
     public uint Sparks { get; private set; }
 
-    [JsonProperty(PropertyName = "avatarUrl")]
+    [JsonProperty("avatarUrl")]
     public string AvatarUrl { get; private set; }
 
-    [JsonProperty(PropertyName = "bio")]
+    [JsonProperty("bio")]
     public string Bio { get; private set; }
 
-    [JsonProperty(PropertyName = "primaryTeam")]
+    [JsonProperty("primaryTeam")]
     public uint? PrimaryTeam { get; private set; }
 
-    [JsonProperty(PropertyName = "transcodingProfileId")]
+    [JsonProperty("transcodingProfileId")]
     public uint? TranscodingProfileId { get; private set; }
 
-    [JsonProperty(PropertyName = "hasTranscodes")]
+    [JsonProperty("hasTranscodes")]
     public bool HasTranscodes { get; private set; }
   }
 }

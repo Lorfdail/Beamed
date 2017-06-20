@@ -3,16 +3,16 @@ using Newtonsoft.Json;
 
 namespace Beamed.Rest.Entities {
   public class Ingest : IEntity {
-    [JsonProperty(PropertyName = "name")]
+    [JsonProperty("name")]
     public string Name { get; private set; }
 
-    [JsonProperty(PropertyName = "host")]
+    [JsonProperty("host")]
     public string Host { get; private set; }
 
-    [JsonProperty(PropertyName = "pingTest")]
+    [JsonProperty("pingTest")]
     public string PingTest { get; private set; }
 
-    [JsonProperty(PropertyName = "protocols")]
+    [JsonProperty("protocols")]
     public KeyValuePair<string, string>[] Protocols { get; private set; }
   }
 }
