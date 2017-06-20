@@ -2,13 +2,13 @@ using Newtonsoft.Json;
 
 namespace Beamed.Rest.Entities {
   public class CPMAnalytic : Entity {
-    [JsonProperty(PropertyName = "channel")]
+    [JsonProperty("channel")]
     public uint ChannelId { get; private set; }
 
-    [JsonProperty(PropertyName = "impressions")]
+    [JsonProperty("impressions")]
     public uint Impressions { get; private set; }
 
-    [JsonProperty(PropertyName = "payout")]
+    [JsonProperty("payout")]
     public double Payout { get; private set; }
   }
 }

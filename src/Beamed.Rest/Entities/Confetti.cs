@@ -9,62 +9,62 @@ namespace Beamed.Rest.Entities {
     }
   }
 
-  public class ConfettiColor : Entity {
-    [JsonProperty(PropertyName = "probability")]
+  public class ConfettiColor {
+    [JsonProperty("probability")]
     public double probability { get; private set; }
 
-    [JsonProperty(PropertyName = "r")]
+    [JsonProperty("r")]
     public string Red { get; private set; }
 
-    [JsonProperty(PropertyName = "g")]
+    [JsonProperty("g")]
     public string Green { get; private set; }
 
-    [JsonProperty(PropertyName = "b")]
+    [JsonProperty("b")]
     public string Blue { get; private set; }
   }
 
-  public class ConfettiParticle : Entity {
-    [JsonProperty(PropertyName = "probability")]
+  public class ConfettiParticle {
+    [JsonProperty("probability")]
     public double Probability { get; private set; }
 
-    [JsonProperty(PropertyName = "velocity")]
+    [JsonProperty("velocity")]
     public string Velocity { get; private set; }
 
-    [JsonProperty(PropertyName = "zdepth")]
+    [JsonProperty("zdepth")]
     public string ZDepth { get; private set; }
 
-    [JsonProperty(PropertyName = "wiggleMagnitude")]
+    [JsonProperty("wiggleMagnitude")]
     public string WiggleMagnitude { get; private set; }
 
-    [JsonProperty(PropertyName = "wigglePeriod")]
+    [JsonProperty("wigglePeriod")]
     public string WigglePeriod { get; private set; }
 
-    [JsonProperty(PropertyName = "lifetime")]
+    [JsonProperty("lifetime")]
     public string Lifetime { get; private set; }
 
-    [JsonProperty(PropertyName = "fader")]
+    [JsonProperty("fader")]
     public string Fader { get; private set; }
 
-    [JsonProperty(PropertyName = "draw")]
+    [JsonProperty("draw")]
     public IConfettiShape Shape { get; private set; }
   }
 
-  public class ConfettiSettings : Entity {
-    [JsonProperty(PropertyName = "count")]
+  public class ConfettiSettings {
+    [JsonProperty("count")]
     public string Count { get; private set; }
 
-    [JsonProperty(PropertyName = "particles")]
+    [JsonProperty("particles")]
     public ConfettiParticle[] Particles { get; private set; }
   }
 
   public class Confetti : Entity {
-    [JsonProperty(PropertyName = "id")]
+    [JsonProperty("id")]
     public uint Id { get; private set; }
 
-    [JsonProperty(PropertyName = "channelId")]
+    [JsonProperty("channelId")]
     public uint ChannelId { get; private set; }
 
-    [JsonProperty(PropertyName = "settings")]
+    [JsonProperty("settings")]
     public ConfettiSettings Settings { get; private set; }
   }
 }

@@ -2,7 +2,7 @@ using Newtonsoft.Json;
 
 namespace Beamed.Rest.Entities {
   public class GameTypeLookup : GameTypeSimple {
-    [JsonProperty(PropertyName = "exact")]
+    [JsonProperty("exact")]
     public bool Exact { get; private set; }
   }
 }

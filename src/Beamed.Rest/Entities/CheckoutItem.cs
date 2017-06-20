@@ -2,10 +2,10 @@ using Newtonsoft.Json;
 
 namespace Beamed.Rest.Entities {
   public class CheckoutItem : Entity {
-    [JsonProperty(PropertyName = "id")]
+    [JsonProperty("id")]
     public uint Id { get; private set; }
 
-    [JsonProperty(PropertyName = "quantity")]
+    [JsonProperty("quantity")]
     public uint Quantity { get; private set; }
   }
 }
