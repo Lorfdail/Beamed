@@ -2,7 +2,7 @@ using System.Collections.Generic;
 using Newtonsoft.Json;
 
 namespace Beamed.Rest.Entities {
-  public class Ingest : IEntity {
+  public class Ingest : Entity {
     [JsonProperty("name")]
     public string Name { get; private set; }
 

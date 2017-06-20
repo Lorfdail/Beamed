@@ -1,7 +1,7 @@
 using Newtonsoft.Json;
 
 namespace Beamed.Rest.Entities {
-  public class EmojiRankAnalytic : IEntity {
+  public class EmojiRankAnalytic : Entity {
     [JsonProperty("channel")]
     public uint Channel { get; private set; }
 

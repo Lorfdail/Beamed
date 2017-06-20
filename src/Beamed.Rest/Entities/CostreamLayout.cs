@@ -1,7 +1,7 @@
 using Newtonsoft.Json;
 
 namespace Beamed.Rest.Entities {
-  public class CostreamLayout : IEntity {
+  public class CostreamLayout : Entity {
     [JsonProperty("name")]
     public string Name { get; private set; }
 

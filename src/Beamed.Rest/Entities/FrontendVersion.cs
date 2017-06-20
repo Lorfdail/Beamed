@@ -1,7 +1,7 @@
 using Newtonsoft.Json;
 
 namespace Beamed.Rest.Entities {
-  public class FrontendVersion : IEntity {
+  public class FrontendVersion : Entity {
     [JsonProperty("version")]
     public string Version { get; private set; }
 

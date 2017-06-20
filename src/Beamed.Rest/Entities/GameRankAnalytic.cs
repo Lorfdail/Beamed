@@ -1,7 +1,7 @@
 using Newtonsoft.Json;
 
 namespace Beamed.Rest.Entities {
-  public class GameRankAnalytic : IEntity {
+  public class GameRankAnalytic : Entity {
     [JsonProperty("channel")]
     public uint Channel { get; private set; }
 

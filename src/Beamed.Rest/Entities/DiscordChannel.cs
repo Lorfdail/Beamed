@@ -1,7 +1,7 @@
 using Newtonsoft.Json;
 
 namespace Beamed.Rest.Entities {
-  public class DiscordChannel : IEntity {
+  public class DiscordChannel : Entity {
     [JsonProperty("id")]
     public string Id { get; private set; }
 

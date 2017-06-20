@@ -1,7 +1,7 @@
 using Newtonsoft.Json;
 
 namespace Beamed.Rest.Entities {
-  public abstract class IConfettiShape : IEntity {
+  public abstract class IConfettiShape : Entity {
     public string Shape;
     
     public T As<T>() where T: IConfettiShape {
@@ -57,7 +57,7 @@ namespace Beamed.Rest.Entities {
     public ConfettiParticle[] Particles { get; private set; }
   }
 
-  public class Confetti : IEntity {
+  public class Confetti : Entity {
     [JsonProperty("id")]
     public uint Id { get; private set; }
 

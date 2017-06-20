@@ -70,7 +70,7 @@ namespace Beamed.Rest.Entities {
     public InteractiveTactileAnalysis Analysis { get; private set; }
   }
 
-  public class InteractiveControls : IEntity {
+  public class InteractiveControls : Entity {
     [JsonProperty("reportInterval")]
     public uint ReportInterval { get; private set; }
 

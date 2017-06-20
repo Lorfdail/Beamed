@@ -25,10 +25,10 @@ namespace Beamed.Rest.Net {
       _client.DefaultRequestHeaders.Add("Authorization", oauthToken);
     }
 
-    public async Task<T> RequestEndpointAsync<T> (string endpoint, HttpMethod method, string bucketKey = null) where T: Beamed.Rest.IEntity
+    public async Task<T> RequestEndpointAsync<T> (string endpoint, HttpMethod method, string bucketKey = null) where T: Beamed.Rest.Entity
       => await RequestEndpointAsync<T>(new Uri(endpoint), method, bucketKey);
 
-    public async Task<T> RequestEndpointAsync<T> (Uri endpoint, HttpMethod method, string bucketKey = null) where T: Beamed.Rest.IEntity {
+    public async Task<T> RequestEndpointAsync<T> (Uri endpoint, HttpMethod method, string bucketKey = null) where T: Beamed.Rest.Entity {
       HttpRequestMessage request = new HttpRequestMessage(method, endpoint);
       HttpResponseMessage response = null;
 

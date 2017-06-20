@@ -15,7 +15,7 @@ namespace Beamed.Rest.Entities {
     public uint? GracePeriod { get; private set; }
   }
 
-  public class DiscordBot : IEntity {
+  public class DiscordBot : Entity {
     [JsonProperty("id")]
     public uint Id { get; private set; }
 

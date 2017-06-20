@@ -9,7 +9,7 @@ namespace Beamed.Rest.Entities {
     public bool StandardDerivation { get; private set; }
   }
 
-  public class InteractiveJoyStickAnalysis : IEntity {
+  public class InteractiveJoyStickAnalysis : Entity {
     [JsonProperty("coords")]
     public InteractiveControllerCoords Coordinations { get; private set; }
   }

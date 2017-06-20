@@ -1,5 +1,5 @@
 namespace Beamed.Rest {
-  public abstract class IEntity {
+  public abstract class Entity {
     
   }
 }
