@@ -8,8 +8,8 @@ namespace Beamed.Rest.Net {
   public class MixerRestClient {
     private HttpClient _client;
     public Uri ResourceUri { get; private set; }
-
     private RateLimitManager rateLimitManager { get; set; }
+    public uint MaxRateLimitWait { get; set; }
 
     public MixerRestClient(string resource)
       : this(new Uri(resource)) { }
@@ -18,6 +18,7 @@ namespace Beamed.Rest.Net {
       _client = new HttpClient(); // new HttpClient(new LoggingHandler(new HttpClientHandler()));
       rateLimitManager = new RateLimitManager();
       ResourceUri = resource;
+      MaxRateLimitWait = 60000;
     }
 
     public void UpdateToken(string oauthToken) {
@@ -34,11 +35,13 @@ namespace Beamed.Rest.Net {
 
       try {
         if(bucketKey != null) {
-          if(!await rateLimitManager.ReserveRequest(bucketKey))
+          if(!await rateLimitManager.WaitForLimit(bucketKey, MaxRateLimitWait))
             return default(T);
         }
 
         response = await _client.SendAsync(request); 
+        if(bucketKey != null)
+          rateLimitManager.UpdateLimit(response.Headers, bucketKey);
         response.EnsureSuccessStatusCode();
 
         if (response != null)
