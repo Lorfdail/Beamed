@@ -1,7 +1,7 @@
 using Newtonsoft.Json;
 
 namespace Beamed.Rest.Entities {
-  public class Achievement : IEntity {
+  public class Achievement : Entity {
     [JsonProperty(PropertyName = "slug")]
     public string Slug { get; private set; }
 

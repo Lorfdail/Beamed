@@ -1,7 +1,7 @@
 using Newtonsoft.Json;
 
 namespace Beamed.Rest.Entities {
-  public class ChannelPreferences : IEntity {
+  public class ChannelPreferences : Entity {
     [JsonProperty(PropertyName = "sharetext")]
     public string ShareText { get; private set; }
     
