@@ -1,7 +1,7 @@
 using Newtonsoft.Json;
 
 namespace Beamed.Rest.Entities {
-  public class CostreamChannel : IEntity {
+  public class CostreamChannel : Entity {
     [JsonProperty(PropertyName = "id")]
     public uint Id { get; private set; }
 
@@ -12,7 +12,7 @@ namespace Beamed.Rest.Entities {
     public string Token { get; private set; }
   }
 
-  public class Costream : IEntity {
+  public class Costream : Entity {
     [JsonProperty(PropertyName = "channels")]
     public CostreamChannel[] Channels { get; private set; }
 
