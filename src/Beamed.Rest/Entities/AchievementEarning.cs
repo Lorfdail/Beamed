@@ -2,22 +2,22 @@ using Newtonsoft.Json;
 
 namespace Beamed.Rest.Entities {
   public class AchievementEarning : Entity {
-    [JsonProperty(PropertyName = "id")]
+    [JsonProperty("id")]
     public uint Id { get; private set; }
     
-    [JsonProperty(PropertyName = "earned")]
+    [JsonProperty("earned")]
     public bool Earned { get; private set; }
     
-    [JsonProperty(PropertyName = "progress")]
+    [JsonProperty("progress")]
     public double Progress { get; private set; }
 
-    [JsonProperty(PropertyName = "achievement")]
+    [JsonProperty("achievement")]
     public string AchievementName { get; private set; }
     
-    [JsonProperty(PropertyName = "user")]
+    [JsonProperty("user")]
     public uint UserId { get; private set; }
     
-    [JsonProperty(PropertyName = "Achievement")]
+    [JsonProperty("Achievement")]
     public Achievement Achievement { get; private set; }
   }
 }

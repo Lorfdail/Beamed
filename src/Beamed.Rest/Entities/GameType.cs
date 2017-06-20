@@ -2,19 +2,19 @@ using Newtonsoft.Json;
 
 namespace Beamed.Rest.Entities {
   public class GameType : GameTypeSimple {
-    [JsonProperty(PropertyName = "parent")]
+    [JsonProperty("parent")]
     public string Parent { get; private set; }
     
-    [JsonProperty(PropertyName = "description")]
+    [JsonProperty("description")]
     public string Description { get; private set; }
     
-    [JsonProperty(PropertyName = "source")]
+    [JsonProperty("source")]
     public string Source { get; private set; }
     
-    [JsonProperty(PropertyName = "viewersCurrent")]
+    [JsonProperty("viewersCurrent")]
     public uint ViewersCurrent { get; private set; }
     
-    [JsonProperty(PropertyName = "online")]
+    [JsonProperty("online")]
     public bool Online { get; private set; }
   }
 }

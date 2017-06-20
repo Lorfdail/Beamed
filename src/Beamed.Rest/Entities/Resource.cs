@@ -2,25 +2,25 @@ using Newtonsoft.Json;
 
 namespace Beamed.Rest.Entities {
   public class Resource : Entity {
-    [JsonProperty(PropertyName = "id")]
+    [JsonProperty("id")]
     public uint Id { get; private set; }
 
-    [JsonProperty(PropertyName = "type")]
+    [JsonProperty("type")]
     public string Type { get; private set; }
 
-    [JsonProperty(PropertyName = "relid")]
+    [JsonProperty("relid")]
     public uint RelId { get; private set; }
 
-    [JsonProperty(PropertyName = "url")]
+    [JsonProperty("url")]
     public string Url { get; private set; }
 
-    [JsonProperty(PropertyName = "store")]
+    [JsonProperty("store")]
     public string Store { get; private set; }
 
-    [JsonProperty(PropertyName = "remotePath")]
+    [JsonProperty("remotePath")]
     public string RemotePath { get; private set; }
 
-    [JsonProperty(PropertyName = "meta")]
+    [JsonProperty("meta")]
     public object Level { get; private set; }
   }
 }

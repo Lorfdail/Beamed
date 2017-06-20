@@ -2,82 +2,79 @@ using Newtonsoft.Json;
 
 namespace Beamed.Rest.Entities {
   public class Channel : Entity {
-    [JsonProperty(PropertyName = "id")]
+    [JsonProperty("id")]
     public uint Id { get; private set; }
 
-    [JsonProperty(PropertyName = "userId")]
+    [JsonProperty("userId")]
     public uint UserId { get; private set; }
 
-    [JsonProperty(PropertyName = "token")]
+    [JsonProperty("token")]
     public string Token { get; private set; }
 
-    [JsonProperty(PropertyName = "online")]
+    [JsonProperty("online")]
     public bool Online { get; private set; }
 
     public bool Featured { get => FeatureLevel > 0; }
 
-    [JsonProperty(PropertyName = "featureLevel")]
+    [JsonProperty("featureLevel")]
     public int FeatureLevel { get; private set; }
 
-    [JsonProperty(PropertyName = "partenered")]
+    [JsonProperty("partenered")]
     public bool Partenered { get; private set; }
 
-    [JsonProperty(PropertyName = "transcodingProfileId")]
+    [JsonProperty("transcodingProfileId")]
     public uint? TranscodingProfileId { get; private set; }
 
-    [JsonProperty(PropertyName = "suspended")]
+    [JsonProperty("suspended")]
     public bool Suspended { get; private set; }
 
-    [JsonProperty(PropertyName = "name")]
+    [JsonProperty("name")]
     public string Name { get; private set; }
 
-    [JsonProperty(PropertyName = "audience")]
+    [JsonProperty("audience")]
     public string Audience { get; private set; }
 
-    [JsonProperty(PropertyName = "viewersTotal")]
+    [JsonProperty("viewersTotal")]
     public uint ViewersTotal { get; private set; }
 
-    [JsonProperty(PropertyName = "viewersCurrent")]
+    [JsonProperty("viewersCurrent")]
     public uint ViewersCurrent { get; private set; }
 
-    [JsonProperty(PropertyName = "numFollowers")]
+    [JsonProperty("numFollowers")]
     public uint NumFollowers { get; private set; }
 
-    [JsonProperty(PropertyName = "description")]
+    [JsonProperty("description")]
     public string Description { get; private set; }
 
-    [JsonProperty(PropertyName = "typeId")]
+    [JsonProperty("typeId")]
     public uint? TypeId { get; private set; }
 
-    [JsonProperty(PropertyName = "interactive")]
+    [JsonProperty("interactive")]
     public bool Interactive { get; private set; }
 
-    [JsonProperty(PropertyName = "interactiveGameId")]
+    [JsonProperty("interactiveGameId")]
     public uint? InteractiveGameId { get; private set; }
 
     // documented as uint but saw having a negative value?
-    [JsonProperty(PropertyName = "ftl")]
+    [JsonProperty("ftl")]
     public int FTL { get; private set; }
 
-    [JsonProperty(PropertyName = "hasVod")]
+    [JsonProperty("hasVod")]
     public bool HasVod { get; private set; }
 
-    [JsonProperty(PropertyName = "languageId")]
+    [JsonProperty("languageId")]
     public string LanguageId { get; private set; }
 
-    [JsonProperty(PropertyName = "coverId")]
+    [JsonProperty("coverId")]
     public uint? CoverId { get; private set; }
 
-    [JsonProperty(PropertyName = "thumbnailId")]
+    [JsonProperty("thumbnailId")]
     public uint? ThumbnailId { get; private set; }
 
-    [JsonProperty(PropertyName = "vodsEnabled")]
+    [JsonProperty("vodsEnabled")]
     public bool VodsEnabled { get; private set; }
 
-    [JsonProperty(PropertyName = "costreamId")]
+    [JsonProperty("costreamId")]
     public string CostreamId { get; private set; }
-
-    [JsonProperty(PropertyName = "thumbnail")]
-    public Resource Thumbnail { get; private set; }
   }
 }
