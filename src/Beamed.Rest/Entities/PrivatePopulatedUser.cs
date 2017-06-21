@@ -1,9 +1,9 @@
 using Newtonsoft.Json;
 
 namespace Beamed.Rest.Entities {
-  public class PrivateTwoFactor : TwoFactor {
-    [JsonProperty("codesViewed")]
-    public bool CodesViewed { get; private set; }
+  public class PrivateTwoFactor {
+    [JsonProperty("enabled")]
+    public bool Enabled { get; private set; }
   }
 
   public class PrivatePopulatedUser : PrivateUser {
