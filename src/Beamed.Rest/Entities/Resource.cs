@@ -21,6 +21,6 @@ namespace Beamed.Rest.Entities {
     public string RemotePath { get; private set; }
 
     [JsonProperty("meta")]
-    public object Level { get; private set; }
+    public object Meta { get; private set; }
   }
 }
