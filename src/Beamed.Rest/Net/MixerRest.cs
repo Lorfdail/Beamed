@@ -3,33 +3,31 @@ using System.Net.Http;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
 using System.Threading;
+using Beamed.Core;
 
 namespace Beamed.Rest.Net {
-  public class MixerRestClient {
+  public class MixerRestClient : MixerClient {
     private HttpClient _client;
     public Uri ResourceUri { get; private set; }
     private RateLimitManager rateLimitManager { get; set; }
     public uint MaxRateLimitWait { get; set; }
 
-    public MixerRestClient(string resource)
-      : this(new Uri(resource)) { }
-
     public MixerRestClient(Uri resource) {
       _client = new HttpClient(); // new HttpClient(new LoggingHandler(new HttpClientHandler()));
       rateLimitManager = new RateLimitManager();
-      ResourceUri = resource;
+      ResourceUri = new Uri(MixerConstants.API_BASE);
       MaxRateLimitWait = 60000;
     }
-
-    public void UpdateToken(string oauthToken) {
-      _client.DefaultRequestHeaders.Clear();
-      _client.DefaultRequestHeaders.Add("Authorization", oauthToken);
-    }
-
+    
     public async Task<T> RequestEndpointAsync<T> (string endpoint, HttpMethod method, string bucketKey = null) where T: Beamed.Rest.Entity
       => await RequestEndpointAsync<T>(new Uri(endpoint), method, bucketKey);
 
     public async Task<T> RequestEndpointAsync<T> (Uri endpoint, HttpMethod method, string bucketKey = null) where T: Beamed.Rest.Entity {
+      if(!base.Authenticated)
+        return null;
+      _client.DefaultRequestHeaders.Clear();
+      _client.DefaultRequestHeaders.Add("Authorization", base.Token);
+
       HttpRequestMessage request = new HttpRequestMessage(method, endpoint);
       HttpResponseMessage response = null;
 
