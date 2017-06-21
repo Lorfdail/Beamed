@@ -4,9 +4,6 @@ namespace Beamed.Rest.Entities {
   public class TwoFactor {
     [JsonProperty("enabled")]
     public bool Enabled { get; private set; }
-
-    [JsonProperty("codesViewed")]
-    public bool CodesViewed { get; private set; }
   }
 
   public class PrivateUser : User {
