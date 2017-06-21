@@ -11,7 +11,7 @@ namespace Beamed.Rest.Entities {
 
   public class PrivateUser : User {
     [JsonProperty("email")]
-    public string Email { get; private set; }
+    public new string Email { get; private set; }
 
     [JsonProperty("password")]
     public string Password { get; private set; }

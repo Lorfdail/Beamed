@@ -1,7 +1,7 @@
 using Newtonsoft.Json;
 
 namespace Beamed.Rest.Entities {
-  public class InteractiveScreenAnalytics {
+  public class InteractiveScreenAnalysis {
     [JsonProperty("position")]
     public InteractiveControllerCoords Position { get; private set; }
 

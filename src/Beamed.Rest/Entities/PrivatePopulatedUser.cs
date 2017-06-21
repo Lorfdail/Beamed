@@ -12,6 +12,6 @@ namespace Beamed.Rest.Entities {
     public UserPreferences Preferences { get; private set; }
 
     [JsonProperty("twoFactor")]
-    public TwoFactor TwoFactor { get; private set; }
+    public new TwoFactor TwoFactor { get; private set; }
   }
 }

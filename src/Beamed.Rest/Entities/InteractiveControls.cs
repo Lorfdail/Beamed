@@ -34,7 +34,7 @@ namespace Beamed.Rest.Entities {
     public Blueprint[] Blueprint { get; private set; }
 
     [JsonProperty("analysis")]
-    public InteractiveJoyStickanalysis Analysis { get; private set; }
+    public InteractiveJoyStickAnalysis Analysis { get; private set; }
   }
 
   public class Screen {
