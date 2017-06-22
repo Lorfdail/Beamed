@@ -167,14 +167,12 @@ namespace Beamed.Rest.Net {
 
     #endregion
 
-    protected override void Dispose(bool disposing)
-    {
+    protected override void Dispose(bool disposing) {
       if (disposed)
           return; 
 
-      if (disposing) {
+      if (disposing)
           _client.Dispose();
-      }
 
       disposed = true;
       base.Dispose(disposing);
