@@ -1,14 +1,17 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
-using Beamed.Rest;
-using Beamed.Rest.Net;
 
 namespace Beamed.Core {
-  public class MixerClient {
-    private MixerRestClient _rest = new MixerRestClient(MixerConstants.API_BASE);
-
+  public class MixerClient : IDisposable {
     public bool Authenticated { get; private set; } = false;
     public string Token { get; private set; }
+
+    public void Dispose() { 
+        Dispose(true);
+        GC.SuppressFinalize(this);           
+    }
+
+    protected virtual void Dispose(bool disposing) { }
   }
 }
