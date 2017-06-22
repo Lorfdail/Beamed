@@ -7,8 +7,7 @@ namespace Beamed.Core {
     public bool Authenticated { get; private set; } = false;
     public string Token { get; private set; }
 
-    public void Dispose()
-    { 
+    public void Dispose() { 
         Dispose(true);
         GC.SuppressFinalize(this);           
     }
