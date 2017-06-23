@@ -47,6 +47,23 @@ namespace Beamed.Rest.Entities {
     public InteractiveScreenAnalysis Analysis { get; private set; }
   }
 
+  // And we're there
+  public class CostPress {
+    [JsonProperty("cost")]
+    public uint Cost { get; private set; }
+  }
+
+  // XTra subprops!
+  public class Cost {
+    [JsonProperty("press")]
+    public CostPress Press { get; private set; }
+  }
+
+  public class CooldownPress {
+    [JsonProperty("press")]
+    public int? Press { get; private set; }
+  }
+
   public class Tactile {
     [JsonProperty("id")]
     public uint Id { get; private set; }
@@ -60,11 +77,12 @@ namespace Beamed.Rest.Entities {
     [JsonProperty("text")]
     public string Text { get; private set; }
 
-    [JsonProperty("cost.press.cost")]
-    public uint Cost { get; private set; }
+    // why did you do this, Mixer...
+    [JsonProperty("cost")]
+    public Cost Cost { get; private set; }
 
-    [JsonProperty("cooldown.press")]
-    public int? Cooldown { get; private set; }
+    [JsonProperty("cooldown")]
+    public CooldownPress Cooldown { get; private set; }
 
     [JsonProperty("analysis")]
     public InteractiveTactileAnalysis Analysis { get; private set; }
