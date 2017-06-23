@@ -1,8 +1,9 @@
 ﻿using System.Collections.Generic;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 
 namespace Beamed.Constellation {
-  public class PacketError {
+  public class ReplyPacketError {
     [JsonProperty("code")]
     public uint Code { get; private set; }
 
@@ -10,7 +11,9 @@ namespace Beamed.Constellation {
     public string Message { get; private set; }
   }
 
-  public abstract class Packet {
+  [JsonObject(MemberSerialization.OptIn)]
+  public class Packet {
+    [JsonProperty("type")]
     public string Type { get; private set; }
 
     public bool IsMethod {
@@ -27,14 +30,17 @@ namespace Beamed.Constellation {
   }
 
   public class MethodPacket : Packet {
+    [JsonProperty("type")]
+    public new string Type = "method";
+
     [JsonProperty("method")]
-    public string Method { get; private set; }
+    public string Method { get; set; }
 
     [JsonProperty("params")]
-    public Dictionary<string, object> Parameters { get; private set; }
+    public Dictionary<string, JToken> Parameters { get; set; }
 
     [JsonProperty("id")]
-    public uint Id { get; private set; }
+    public uint Id { get; set; }
   }
 
   public class ReplyPacket : Packet {
@@ -42,7 +48,7 @@ namespace Beamed.Constellation {
     public object Reply { get; private set; }
 
     [JsonProperty("error")]
-    public PacketError Error { get; private set; }
+    public ReplyPacketError Error { get; private set; }
 
     [JsonProperty("id")]
     public uint Id { get; private set; }
@@ -53,6 +59,6 @@ namespace Beamed.Constellation {
     public string Event { get; private set; }
 
     [JsonProperty("data")]
-    public object Data { get; private set; }
+    public JObject Data { get; private set; }
   }
 }
