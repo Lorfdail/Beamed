@@ -11,5 +11,6 @@
   <ItemGroup>
     <ProjectReference Include="..\Beamed.Core\Beamed.Core.csproj" />
     <ProjectReference Include="..\Beamed.Rest\Beamed.Rest.csproj" />
+    <ProjectReference Include="..\Beamed.Constellation\Beamed.Constellation.csproj" />
   </ItemGroup>
 </Project>
