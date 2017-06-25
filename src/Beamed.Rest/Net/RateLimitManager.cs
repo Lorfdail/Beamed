@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using System.Net.Http.Headers;
+using System.Threading;
 
 namespace Beamed.Rest.Net {
 
@@ -46,12 +47,15 @@ namespace Beamed.Rest.Net {
         RateLimits.Add(key, bucket);
     }
 
-    public async Task<bool> WaitForLimit(string key, uint maxRateLimitWait) {
+    public async Task<bool> WaitForLimit(string key, uint maxRateLimitWait) 
+      => await WaitForLimit(key, maxRateLimitWait, CancellationToken.None);
+
+    public async Task<bool> WaitForLimit(string key, uint maxRateLimitWait, CancellationToken token) {
       if(RateLimits.ContainsKey(key)) {
         int resetTime = MsUntilRequest(key);
         if(resetTime > maxRateLimitWait)
           return false;
-        await Task.Delay(resetTime);
+        await Task.Delay(resetTime, token);
         return true;
       }
       return true;

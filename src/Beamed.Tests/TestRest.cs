@@ -6,7 +6,7 @@ using Xunit;
 using Newtonsoft.Json;
 using Beamed.Core;
 using Beamed.Rest;
-using Beamed.Rest.Entities;
+using Beamed.Rest.Entities.Channels;
 
 namespace Beamed.Tests {
   public class TestRest {

@@ -1,3 +1,4 @@
+using Beamed.Rest.Entities.Channels;
 using Newtonsoft.Json;
 
 namespace Beamed.Rest.Entities {

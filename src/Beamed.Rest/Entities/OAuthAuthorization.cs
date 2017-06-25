@@ -9,6 +9,6 @@ namespace Beamed.Rest.Entities {
     public uint UserId { get; private set; }
 
     [JsonProperty("client")]
-    public OAuthClient Client { get; private set; }
+    public OAuthClient OAuthClient { get; private set; }
   }
 }
